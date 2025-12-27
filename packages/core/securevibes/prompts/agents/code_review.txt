@@ -64,8 +64,8 @@ VALIDATION RULES (STRICTLY ENFORCED):
 
 CORRECT FORMAT (what you MUST write):
 [
-  {"threat_id": "THREAT-001", "title": "SQL Injection", "description": "...", "severity": "critical", ...},
-  {"threat_id": "THREAT-002", "title": "XSS", "description": "...", "severity": "high", ...}
+  {"threat_id": "T001", "title": "SQL Injection", "description": "...", "severity": "critical", ...},
+  {"threat_id": "T002", "title": "XSS", "description": "...", "severity": "high", ...}
 ]
 
 INCORRECT FORMATS (WILL BE REJECTED):
@@ -173,7 +173,7 @@ When reviewing code, constantly ask yourself:
 
 Required JSON structure for each vulnerability:
 {
-  "threat_id": "THREAT-XXX",       // Reference to threat from THREAT_MODEL.json
+  "threat_id": "T001",             // Reference to threat from THREAT_MODEL.json (e.g., T001, T002)
   "title": "string",               // Clear vulnerability title  
   "description": "string",         // What makes this exploitable
   "severity": "string",            // One of: critical, high, medium, low
